@@ -41,3 +41,12 @@ export const updateSubscription = (req, res) => {
         .then((data) => res.json(data))
         .catch((error) => res.json({ message: error}))
 };
+
+export const deleteSubscription = (req, res) => {
+    const { id } = req.params;
+
+    SubscriptionSchema
+        .deleteOne({ _id: id })
+        .then((data) => res.json(data))
+        .catch((error) => res.json({message: error}))
+}
