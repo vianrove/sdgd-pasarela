@@ -3,8 +3,8 @@ import mongoose from "mongoose";
 const Schema = mongoose.Schema;
 
 const SubSchema = Schema({    
-    ISBN: number,
-    amount: number,
+    ISBN: Number,
+    amount: Number,
     Totalprice: Number    
 }, { id: false });   
 
