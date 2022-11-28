@@ -3,12 +3,10 @@ import mongoose from "mongoose";
 const Schema = mongoose.Schema;
 
 const SubSchema = Schema({    
-    ISBN: String,
-    Title: String,
-    Category: String,
-    Amount: String,
-    UnitPrice: Number    
-}, { _id: false });   
+    ISBN: number,
+    amount: number,
+    Totalprice: Number    
+}, { id: false });   
 
 const PaymentSchema = Schema ({
     client: {
